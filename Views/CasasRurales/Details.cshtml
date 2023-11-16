@@ -1,0 +1,82 @@
+﻿@model EcoTravel.Models.CasaRural
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CasaRural</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPersonas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPersonas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroHabitaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroHabitaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActividadesRuralesCerca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActividadesRuralesCerca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HayPiscina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HayPiscina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HayParking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HayParking)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CasaRuralID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

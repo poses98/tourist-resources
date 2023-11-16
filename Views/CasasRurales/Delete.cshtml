@@ -1,0 +1,88 @@
+﻿@model EcoTravel.Models.CasaRural
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CasaRural</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPersonas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPersonas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroHabitaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroHabitaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActividadesRuralesCerca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActividadesRuralesCerca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HayPiscina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HayPiscina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HayParking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HayParking)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

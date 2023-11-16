@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EcoTravel.Models.AlquilerCoche>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.compañia_Alquiler)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion_Recogida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_Coche)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_Plazas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_Coches)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ofrece_Seguro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ofrece_Sillas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.compañia_Alquiler)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion_Recogida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_Coche)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_Plazas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_Coches)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ofrece_Seguro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ofrece_Sillas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

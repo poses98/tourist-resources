@@ -1,0 +1,90 @@
+﻿@model EcoTravel.Models.BilleteAvion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BilleteAvion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Compania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HayCafeteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HayCafeteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPlazas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPlazas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraSalida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraLlegada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraLlegada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdBilleteAvion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

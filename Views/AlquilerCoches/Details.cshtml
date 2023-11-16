@@ -1,0 +1,74 @@
+﻿@model EcoTravel.Models.AlquilerCoche
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AlquilerCoche</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.compañia_Alquiler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compañia_Alquiler)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_Recogida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_Recogida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_Coche)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_Coche)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_Plazas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_Plazas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_Coches)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_Coches)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ofrece_Seguro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ofrece_Seguro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ofrece_Sillas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ofrece_Sillas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<EcoTravel.Models.Hotel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroEstrellas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rural)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mascotas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoloAdultos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tematico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroHabitaciones)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroEstrellas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rural)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mascotas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoloAdultos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tematico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroHabitaciones)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HotelID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HotelID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HotelID })
+        </td>
+    </tr>
+}
+
+</table>

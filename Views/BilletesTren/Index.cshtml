@@ -1,0 +1,81 @@
+﻿@model IEnumerable<EcoTravel.Models.BilleteTren>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Compania)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoTren)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Origen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HayCafeteria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroPlazas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraLlegada)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Compania)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoTren)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HayCafeteria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroPlazas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraLlegada)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdBilleteTren }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdBilleteTren }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdBilleteTren })
+        </td>
+    </tr>
+}
+
+</table>

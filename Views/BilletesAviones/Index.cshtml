@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EcoTravel.Models.BilleteAvion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompaniaAerea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AeropuertoOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AeropuertoDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LowCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroPlazas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraLlegada)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompaniaAerea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AeropuertoOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AeropuertoDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LowCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroPlazas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraLlegada)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdBilleteAvion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdBilleteAvion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdBilleteAvion })
+        </td>
+    </tr>
+}
+
+</table>

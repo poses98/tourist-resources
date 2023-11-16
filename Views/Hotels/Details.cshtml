@@ -1,0 +1,98 @@
+﻿@model EcoTravel.Models.Hotel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hotel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroEstrellas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEstrellas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rural)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rural)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mascotas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mascotas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoloAdultos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoloAdultos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tematico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tematico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroHabitaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroHabitaciones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HotelID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
